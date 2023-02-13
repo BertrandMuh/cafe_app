@@ -1,0 +1,9 @@
+1. We will need three pages, the auth page, the new order page and order history page.
+
+2. we will need the user's collection, the food or product collection.
+
+3. In the user collection, we will have the name, email address, and password documents. In the food collection, we will have the name, the price and image url for each product.
+
+4. 
+
+5. we will a get route to get all the items in the database, a put route to update a specific item inventory whenever it is purchased.
