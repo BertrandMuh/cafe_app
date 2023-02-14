@@ -2,7 +2,7 @@ import React from 'react'
 
 const New_order = () => {
     return (
-        <div>New_order</div>
+        <div>New order</div>
     )
 }
 

@@ -3,6 +3,13 @@ const path = require('path');
 const logger = require('morgan');
 // cross origin access 
 const cors = require('cors');
+const bcrypt = require('bcrypt')
+const User = require('./models/user')
+
+const passport = require('passport')
+const session = require('express-session')
+const initializePassport = require('./config/passport-config')
+
 require("./config/database.js")
 require('dotenv').config()
 
@@ -28,13 +35,26 @@ app.get('/test_route', (req, res) => {
     res.send("good route!")
 })
 
-app.post('/api/users', (req, res) => {
+app.post('/users/signup', async (req, res) => {
     console.log(req.body);
-    // doing authentication here
-
+    let hashedPassword = await bcrypt.hash(req.body.password, 10)
+    console.log(hashedPassword);
+    // use User model to place user in the database
+    let userFromCollection = await User.create({
+        email: req.body.email,
+        name: req.body.name,
+        password: hashedPassword
+    })
+    console.log(userFromCollection);
     // sending user response after creation or login
-    res.json("good route")
+    res.json("user created")
 })
+app.put('/users/login', async (req, res) => {
+    console.log(req.body);
+
+})
+
+
 
 
 

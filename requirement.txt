@@ -4,6 +4,6 @@
 
 3. In the user collection, we will have the name, email address, and password documents. In the food collection, we will have the name, the price and image url for each product.
 
-4. 
+4. We will need the user state in App.js, the quantity of the product we want to buy to get the total in App.js , the cart state to display the item(s) in it.
 
 5. we will a get route to get all the items in the database, a put route to update a specific item inventory whenever it is purchased.
