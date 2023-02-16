@@ -7,3 +7,7 @@
 4. We will need the user state in App.js, the quantity of the product we want to buy to get the total in App.js , the cart state to display the item(s) in it.
 
 5. we will a get route to get all the items in the database, a put route to update a specific item inventory whenever it is purchased.
+
+
+npm list -g --depth 0
+^^^ will list all global packages

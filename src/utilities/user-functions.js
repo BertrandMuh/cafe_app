@@ -1,22 +1,25 @@
 
-import axios from "axios"
 
+import axios from 'axios';
+// utilites folder is for universal, reusable functions
 export const signUp = async (formData) => {
-    console.log(formData);
+
     let serverResponse = await axios({
         method: "POST",
-        url: "/users/signup", // route to do sign up
+        url: "/users/signup", // route to do signup
         data: formData
-    })
+    });
+
     return serverResponse;
 }
 export const logIn = async (formData) => {
-    console.log(formData);
+
     let serverResponse = await axios({
         method: "PUT",
-        url: "/users/login", // route to do sign up
+        url: "/users/login",
         data: formData
-    })
+    });
+    console.log(serverResponse);
     return serverResponse;
 }
 
